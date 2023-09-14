@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import ="java.util.ArrayList"%>
+<%@ page import ="TodoListTeamProject.Board"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<H2>학생리스트</H2>
+<% ArrayList<Board> list = (ArrayList<Board>)request.getAttribute("list"); %>
+<% for(int i=0; i<list.size(); i++){
+	out.println(list.get(i) + "<br>");
+}
+		%>
+</body>
+</html>
