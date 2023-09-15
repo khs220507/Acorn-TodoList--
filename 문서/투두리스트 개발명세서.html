@@ -1,0 +1,740 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>TO_DO_LIST 개발명세서</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3e8669db-9181-41da-87e0-b74a19241fc3" class="page sans"><header><h1 class="page-title">TO_DO_LIST 개발명세서</h1><p class="page-description"></p></header><div class="page-body"><p id="d467911b-860e-41ef-8ad7-357347970e90" class="">
+</p><p id="ef09b120-e4f4-49f8-ae1a-74f4907c77f9" class="">
+</p><p id="92963fc0-7ab3-4676-a7c1-d47cdb63d0dc" class=""><strong>김재열 —로그인 / 로그아웃 개발 명세서</strong></p><table id="1adaf917-6dc3-4968-9c99-59cf186aeb76" class="simple-table"><tbody><tr id="1407933a-203c-4361-b1e6-2d9799fe3a5f"><td id="u~Sl" class="block-color-blue_background"></td><td id="hqn|" class="block-color-blue_background"><strong>요청 url</strong></td><td id="Vwa=" class="block-color-blue_background"><strong>서블릿(Controller)</strong></td><td id="HraM" class="block-color-blue_background"><strong>요청방식</strong></td><td id="MaX;" class="block-color-blue_background"><strong>Model</strong></td><td id="&lt;jQ{" class="block-color-blue_background"><strong>view</strong></td><td id="tD=L" class="block-color-blue_background"><strong>화면</strong></td><td id="ab|x" class="block-color-blue_background"></td></tr><tr id="21a4d2d9-4b14-4393-b553-4e62726ce9c7"><td id="u~Sl" class="block-color-blue_background"><strong>메인화면</strong></td><td id="hqn|" class="">home.do</td><td id="Vwa=" class="">HomeServlet</td><td id="HraM" class="">Get</td><td id="MaX;" class="">X</td><td id="&lt;jQ{" class="">home.jsp</td><td id="tD=L" class="">홈화면
+(첫 화면)</td><td id="ab|x" class=""></td></tr><tr id="134ae914-b20c-4451-bf4a-e5ef21cec213"><td id="u~Sl" class="block-color-blue_background"></td><td id="hqn|" class=""></td><td id="Vwa=" class=""></td><td id="HraM" class=""></td><td id="MaX;" class=""></td><td id="&lt;jQ{" class=""></td><td id="tD=L" class=""></td><td id="ab|x" class=""></td></tr><tr id="ec1ce41d-3d3a-418b-b211-bec9ffc2121c"><td id="u~Sl" class="block-color-blue_background"><strong>로그인
+ 
+ 
+</strong></td><td id="hqn|" class="">login.do
+ 
+ 
+home.do</td><td id="Vwa=" class="">LoginServlet(로그인 요청 받기)
+ 
+LogoutServlet(로그아웃 요청받기)</td><td id="HraM" class="">Ge</td><td id="MaX;" class="">X</td><td id="&lt;jQ{" class="">login.jsp</td><td id="tD=L" class="">로그인화면</td><td id="ab|x" class="">실패시: 
+로그인화면
+ 
+ 
+성공시:
+메인화면</td></tr><tr id="a8da8c08-3c4d-4eae-aaa3-9ce6ca9e8bc4"><td id="u~Sl" class="block-color-blue_background"><strong>로그아웃</strong></td><td id="hqn|" class=""></td><td id="Vwa=" class=""></td><td id="HraM" class="">
+ 
+Post</td><td id="MaX;" class="">LoginService(로그인 비지니스 로직 처리)
+ 
+LoginDAO(DB에 로그인 sql문 전송)</td><td id="&lt;jQ{" class=""></td><td id="tD=L" class="">로그인 성공시 메인페이지 이동
+ 
+로그아웃시 게스트 메인페이지 이동</td><td id="ab|x" class=""></td></tr></tbody></table><p id="42976e1d-2ea6-4b72-a0f3-5464e95a46e0" class="">
+</p><p id="0de992ba-05f7-4126-ac06-8ed9e7544874" class=""><strong>이정훈—회원가입/수정/탈퇴 개발 </strong></p><table id="7ffc9177-0a59-48b8-a1cf-6eab08277926" class="simple-table"><tbody><tr id="67ec183f-ff5a-40e3-9c93-3d538e9d8277"><td id="u~Sl" class="block-color-blue_background"></td><td id="hqn|" class="block-color-blue_background"><strong>요청 url</strong></td><td id="Vwa=" class="block-color-blue_background"><strong>서블릿(Controller)</strong></td><td id="HraM" class="block-color-blue_background"><strong>요청방식</strong></td><td id="MaX;" class="block-color-blue_background"><strong>Model</strong></td><td id="&lt;jQ{" class="block-color-blue_background"><strong>view</strong></td><td id="tD=L" class="block-color-blue_background"><strong>화면</strong></td><td id="ab|x" class="block-color-blue_background"></td></tr><tr id="71ad8367-9ae2-4cf3-b679-0f251922ea17"><td id="u~Sl" class="block-color-blue_background">회원가입</td><td id="hqn|" class="">reg.do</td><td id="Vwa=" class="">RegServlet</td><td id="HraM" class="">get</td><td id="MaX;" class="">x</td><td id="&lt;jQ{" class="">reg.jsp</td><td id="tD=L" class="">회원가입화면</td><td id="ab|x" class=""></td></tr><tr id="9b20078d-ed79-4ffc-9bca-8de79aef31ba"><td id="u~Sl" class="block-color-blue_background"></td><td id="hqn|" class=""></td><td id="Vwa=" class=""></td><td id="HraM" class="">post</td><td id="MaX;" class="">RegService
+RegDAO</td><td id="&lt;jQ{" class=""></td><td id="tD=L" class=""></td><td id="ab|x" class="">성공:메인화면
+실패: 회원가입화면</td></tr><tr id="5d0d97bf-e5b8-4817-9f57-fd1bac4ff688"><td id="u~Sl" class="block-color-blue_background">회원수정</td><td id="hqn|" class="">modi.do</td><td id="Vwa=" class="">ModifyServlet</td><td id="HraM" class="">get</td><td id="MaX;" class="">x</td><td id="&lt;jQ{" class="">modify.jsp</td><td id="tD=L" class="">회원정보수정화면</td><td id="ab|x" class=""></td></tr><tr id="e2dc57c0-9aef-4a1d-a5c2-d6b4b8d041b0"><td id="u~Sl" class="block-color-blue_background"></td><td id="hqn|" class=""></td><td id="Vwa=" class=""></td><td id="HraM" class="">post</td><td id="MaX;" class="">ModifyService
+RegDAO</td><td id="&lt;jQ{" class=""></td><td id="tD=L" class=""></td><td id="ab|x" class="">성공/실패:메인페이지</td></tr><tr id="1048ba97-002d-43a7-a98c-27e3bef1f887"><td id="u~Sl" class="block-color-blue_background">회원탈퇴</td><td id="hqn|" class="">u_del.do</td><td id="Vwa=" class="">U_deleteServlet</td><td id="HraM" class="">get</td><td id="MaX;" class="">x</td><td id="&lt;jQ{" class="">u_delete.jsp</td><td id="tD=L" class="">회원탈퇴화면</td><td id="ab|x" class=""></td></tr><tr id="d569d678-4498-441a-975d-524a7595a2e9"><td id="u~Sl" class="block-color-blue_background"></td><td id="hqn|" class=""></td><td id="Vwa=" class=""></td><td id="HraM" class="">post</td><td id="MaX;" class="">U_deleteService
+RegDAO</td><td id="&lt;jQ{" class=""></td><td id="tD=L" class=""></td><td id="ab|x" class="">성공/실패:메인페이지</td></tr><tr id="10a956c0-c7b0-419a-8441-19dca05cd412"><td id="u~Sl" class="block-color-blue_background"></td><td id="hqn|" class=""></td><td id="Vwa=" class=""></td><td id="HraM" class=""></td><td id="MaX;" class=""></td><td id="&lt;jQ{" class=""></td><td id="tD=L" class=""></td><td id="ab|x" class=""></td></tr><tr id="6c38ab06-3223-4d76-9224-56f42a88c838"><td id="u~Sl" class="block-color-blue_background"></td><td id="hqn|" class=""></td><td id="Vwa=" class=""></td><td id="HraM" class=""></td><td id="MaX;" class=""></td><td id="&lt;jQ{" class=""></td><td id="tD=L" class=""></td><td id="ab|x" class=""></td></tr></tbody></table><p id="fe7ccce5-1d4a-413f-8312-537d1185f463" class="">
+</p><p id="9d9eeca1-37cf-4337-8c24-222155dfd1fa" class="">
+</p><p id="d78e2a42-6a3d-4098-900d-cd65ea421d12" class=""><strong>이윤 — 메모 개발 명세서</strong></p><table id="3edee6d6-de3a-494c-8199-affaa4c6a1f1" class="simple-table"><tbody><tr id="55fa8725-aa87-420e-8eb6-62e8a3ae1073"><td id="u~Sl" class="block-color-blue_background"></td><td id="hqn|" class="block-color-blue_background"><strong>요청 url</strong></td><td id="Vwa=" class="block-color-blue_background"><strong>서블릿(Controller)</strong></td><td id="HraM" class="block-color-blue_background"><strong>요청방식</strong></td><td id="MaX;" class="block-color-blue_background"><strong>Model</strong></td><td id="&lt;jQ{" class="block-color-blue_background"><strong>view</strong></td><td id="tD=L" class="block-color-blue_background"><strong>화면</strong></td></tr><tr id="790922e4-8368-47a2-ac1b-54d4185d69be"><td id="u~Sl" class="block-color-blue_background"><strong>메인화면</strong></td><td id="hqn|" class="">main.do</td><td id="Vwa=" class="">MainServlet</td><td id="HraM" class="">Get</td><td id="MaX;" class="">X</td><td id="&lt;jQ{" class="">main.jsp</td><td id="tD=L" class="">메인화면
+(삭제 버튼)</td></tr><tr id="d0efbdc1-d236-4968-a180-2599f860ac15"><td id="u~Sl" class="block-color-blue_background">메모</td><td id="hqn|" class="">X</td><td id="Vwa=" class="">MemoRegisterServlet (등록)
+
+MemoInquiryServlet (조회)
+
+MemoModifyServlet (수정)
+
+MemoDeleteServlet (삭제)
+
+
+ </td><td id="HraM" class="">Get
+ 
+</td><td id="MaX;" class="">BoardMemoService(투두리스트 비지니스 로직 처리)
+
+BoardMemoDAO(DB에 투두리스트 메모 sql문 전송)</td><td id="&lt;jQ{" class="">main.jsp</td><td id="tD=L" class="">
+메모화면에  등록, 수정, 삭제</td></tr></tbody></table><p id="6b616df9-9812-424f-bd22-fd8ddbd5d4b3" class="">
+</p><p id="d7855154-f1ec-462d-b5c2-ebd986336b16" class=""><strong>김민지— 등록/삭제 개발 명세서</strong></p><table id="348f0783-5306-4434-9142-2effc3d066f8" class="simple-table"><tbody><tr id="42ff7b54-6adf-422a-9141-63c6d70c5b6f"><td id="u~Sl" class="block-color-blue_background"></td><td id="hqn|" class="block-color-blue_background"><strong>요청 url</strong></td><td id="Vwa=" class="block-color-blue_background"><strong>서블릿(Controller)</strong></td><td id="HraM" class="block-color-blue_background"><strong>요청방식</strong></td><td id="MaX;" class="block-color-blue_background"><strong>Model</strong></td><td id="&lt;jQ{" class="block-color-blue_background"><strong>view</strong></td><td id="tD=L" class="block-color-blue_background"><strong>화면</strong></td></tr><tr id="27fffc83-d3bb-4789-9777-0b1a787281c7"><td id="u~Sl" class="block-color-blue_background"><strong>메인화면</strong></td><td id="hqn|" class="">main.do</td><td id="Vwa=" class="">MainServlet</td><td id="HraM" class="">Get</td><td id="MaX;" class="">X</td><td id="&lt;jQ{" class="">main.jsp</td><td id="tD=L" class="">메인화면
+(추가 버튼)</td></tr><tr id="fa92289a-9a76-4924-a289-5252a4e430fa"><td id="u~Sl" class="block-color-blue_background"><strong>to-do-list
+등록</strong></td><td id="hqn|" class="">
+X</td><td id="Vwa=" class="">BoardRegisterServlet</td><td id="HraM" class="">
+Get</td><td id="MaX;" class="">BoardService(투두리스트 비지니스 로직 처리)
+
+BoardDAO(DB에 투두리스트 sql문 전송)</td><td id="&lt;jQ{" class="">
+main.jsp</td><td id="tD=L" class="">등록시 메인화면에 ajax로 등록내용 추가</td></tr><tr id="ac4b2ab0-b5e0-4792-ab12-7e57d5d9dd1e"><td id="u~Sl" class="block-color-blue_background"><strong>to-do-list
+삭제</strong></td><td id="hqn|" class="">X</td><td id="Vwa=" class="">BoardDeleteServlet</td><td id="HraM" class="">Get</td><td id="MaX;" class="">BoardService(투두리스트 비지니스 로직 처리)
+
+BoardDAO(DB에 투두리스트 sql</td><td id="&lt;jQ{" class="">main.jsp</td><td id="tD=L" class="">삭제시 메인화면에 ajax로 내용 삭제</td></tr></tbody></table><p id="526c9454-3d63-47a4-a524-5b6a3a554922" class="">
+</p><p id="f8db44a7-2e60-4be8-a526-ece0fe003fe0" class=""><strong>김현수— 수정 개발 명세서</strong></p><table id="954749fc-6447-41bc-97f2-f59261c851fa" class="simple-table"><tbody><tr id="d53a15f7-d64c-429f-8a82-d7fa0431bcd7"><td id="OsbG" class="block-color-blue_background"></td><td id="&lt;k~:" class="block-color-blue_background"><strong>요청 url</strong></td><td id="j?Tc" class="block-color-blue_background"><strong>서블릿(Controller)</strong></td><td id="`c^W" class="block-color-blue_background"><strong>요청방식</strong></td><td id="y[=c" class="block-color-blue_background"><strong>Model</strong></td><td id="[F`v" class="block-color-blue_background"><strong>view</strong></td><td id="Dpso" class="block-color-blue_background"><strong>화면</strong></td></tr><tr id="768d6681-d8a2-4504-b2c8-d0224b7bbc54"><td id="OsbG" class="block-color-blue_background"><strong>메인화면</strong></td><td id="&lt;k~:" class="">main.do</td><td id="j?Tc" class="">MainServlet</td><td id="`c^W" class="">Get</td><td id="y[=c" class="">X</td><td id="[F`v" class="">main.jsp</td><td id="Dpso" class="">메인화면
+(편집 버튼)</td></tr><tr id="f80169d6-f4d5-48d6-871f-dd034dfdf74c"><td id="OsbG" class="block-color-blue_background"><strong>to-do-list
+수정</strong></td><td id="&lt;k~:" class="">X</td><td id="j?Tc" class="">BoardChangeServlet</td><td id="`c^W" class="">Get</td><td id="y[=c" class="">BoardService
+
+BoardDAO</td><td id="[F`v" class="">main.jsp</td><td id="Dpso" class="">수정시 메인화면에 ajax로 내용 변경</td></tr><tr id="c6b62d0f-b806-44ed-8d5a-f3aff4212589"><td id="OsbG" class="block-color-blue_background"><strong>to-do-list
+조회</strong></td><td id="&lt;k~:" class="">X</td><td id="j?Tc" class="">BoardShowAll</td><td id="`c^W" class="">GET</td><td id="y[=c" class="">BoardService
+
+BoardDAO</td><td id="[F`v" class="">main.jsp</td><td id="Dpso" class="">메인화면 시작시 ajax 내용 전체 조회</td></tr></tbody></table><p id="deb52ee9-ccfa-4c97-9eea-ee355e4d4f11" class="">
+</p></div></article></body></html>

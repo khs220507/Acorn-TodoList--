@@ -10,4 +10,9 @@
     <fullyQualifiedTypeName name="TodoBoard.BoardDAO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="TodoBoard.BoardService"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="org.json.JSONArray"/>
+    <fullyQualifiedTypeName name="netscape.javascript.JSObject"/>
+    <fullyQualifiedTypeName name="org.json.JSONObject"/>
+    <fullyQualifiedTypeName name="org.json.JSONString"/>
 </qualifiedTypeNameHistroy>

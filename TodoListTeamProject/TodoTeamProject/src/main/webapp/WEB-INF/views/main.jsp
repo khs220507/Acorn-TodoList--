@@ -1,34 +1,49 @@
+<%@page import="org.json.JSONObject"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@ page import ="java.util.ArrayList"%>
-<%@ page import ="TodoBoard.Board"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	pageEncoding="EUC-KR"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="TodoBoard.Board"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+
 <!DOCTYPE html>
 <html>
+
+
+
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<script>
+window.addEventListener("load", test);
+function test(){
+	$.ajax({
+		type:"get",
+		url:"/TodoTeamProject/mainData",
+		dataType:"json",
+		success:function(data){
+			output='';
+			$.each(data,function(){
+				output+= '<span>';
+				
+				output+= this.contents;
+				output+= '<button>수정</button><button>삭제</button><br>';
+				output+= '</span>';
+			});
+			document.getElementById('disp').innerHTML = output;
+		}
+	});
+};
+
+        </script>
 </head>
 <body>
-<H2>학생리스트</H2>
 
-<table>
-<tr>
-<td>코드</td>
-<td>이름</td>
-<td>가격</td>
-</tr>
-<%
-ArrayList<Board> list = (ArrayList<Board>)request.getAttribute("list");
-%>
-<c:forEach var="item" items="${list}">
-<tr>
-<td>${item.no}</td>
-<td>${item.id}</td>
-<td>${item.contents}<button onclick="modify()">수정</button></td>
-</tr>
-</c:forEach>
+<div id="disp"></div>
 
-</table>
+
+
 </body>
 </html>

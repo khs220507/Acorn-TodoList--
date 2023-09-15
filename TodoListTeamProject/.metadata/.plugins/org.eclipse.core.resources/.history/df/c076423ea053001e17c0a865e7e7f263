@@ -1,0 +1,14 @@
+package TodoBoard;
+
+import java.util.ArrayList;
+
+public class MainDataServlet {
+	BoardService s = new BoardService();
+	ArrayList<Board> list = s.getBoardData();
+
+	String json = new Gson().toJson(list);
+	resp.setContentType("a pplication/json");
+	resp.setCharacterEncoding("UTF-8");
+	resp.getWriter().write(json);
+	
+}

@@ -51,11 +51,10 @@ public class BoardDAO {
 				int no_tmp = rs.getInt(2);
 				String id_tmp = rs.getString(3);
 				String contents_tmp = rs.getString(4);
-				String memo_tmp = rs.getString(5);
-				String date_tmp = rs.getString(6);
-				String star_tmp = rs.getString(7);
-				String finished_tmp = rs.getString(8);
-				board = new Board(code_tmp, no_tmp, id_tmp, contents_tmp, memo_tmp, date_tmp, star_tmp, finished_tmp);
+				String date_tmp = rs.getString(5);
+				String star_tmp = rs.getString(6);
+				String finished_tmp = rs.getString(7);
+				board = new Board(code_tmp, no_tmp, id_tmp, contents_tmp, date_tmp, star_tmp, finished_tmp);
 				list.add(board);
 
 			}
@@ -91,6 +90,6 @@ public class BoardDAO {
 				e.printStackTrace();
 			}
 		}
-	}
+	} 
 
 }

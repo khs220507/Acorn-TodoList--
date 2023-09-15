@@ -1,0 +1,14 @@
+package TodoBoard;
+
+import java.util.ArrayList;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+import com.google.gson.Gson;
+
+@WebServlet("/mainData")
+public class MainDataServlet extends HttpServlet{
+	
+	
+}
