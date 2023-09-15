@@ -71,15 +71,18 @@ public class BoardDAO {
 
 	// 할일등록 - 민지
 	public void registerTodo(Board b) {
+
 	}
 
 	// 할일수정 - 현수
 	public void changeTodo(Board b) {
 
 	}
+
 	// 할일삭제 - 윤 *보류
 
 	public void deleteTodo(int No) {
+
 	}
 
 	public void close(AutoCloseable... a) {
