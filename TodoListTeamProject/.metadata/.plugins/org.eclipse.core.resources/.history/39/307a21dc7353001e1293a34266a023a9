@@ -32,7 +32,7 @@ public class BoardDAO {
 		return con;
 	}
 
-	// 전체조회 - 현수
+	// 전체조회 - 윤
 
 	public ArrayList<Board> showAllTodo() {
 
@@ -68,16 +68,16 @@ public class BoardDAO {
 		close(rs, pst, con);
 		return list;
 	}
-	
+
 	// 할일등록 - 민지
 	public void registerTodo(Board b) {
 	}
-	
+
 	// 할일수정 - 현수
 	public void changeTodo(Board b) {
+
 	}
-	
-	// 할일삭제 - 민지
+	// 할일삭제 - 윤 *보류
 
 	public void deleteTodo(int No) {
 	}

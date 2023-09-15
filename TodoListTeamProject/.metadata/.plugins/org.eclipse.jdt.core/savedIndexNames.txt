@@ -18,6 +18,7 @@ INDEX VERSION 1.134+C:\Users\khs22\Desktop\TeamProject\TodoListTeamProject\.meta
 67077848.index
 3650885615.index
 1667639643.index
+1272831701.index
 3590938463.index
 615255493.index
 4076203736.index
@@ -32,7 +33,6 @@ INDEX VERSION 1.134+C:\Users\khs22\Desktop\TeamProject\TodoListTeamProject\.meta
 2012579816.index
 1679149500.index
 428054767.index
-2473136487.index
-3180197685.index
 1986892561.index
-62127626.index
+3180197685.index
+2473136487.index
