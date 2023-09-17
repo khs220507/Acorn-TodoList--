@@ -74,6 +74,20 @@ public class BoardDAO {
 	
 	// 할일수정 - 현수
 	public void changeTodo(Board b) {
+		Connection con = dbcon();
+		PreparedStatement pst = null;
+		String sql = "update board_tbl set b_contents = ? where b_code = ?";
+		
+		try {
+			pst = con.prepareStatement(sql);
+			pst.setString(1, b.getContents());
+			pst.setString(2, b.getCode());
+			pst.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		close();
 	}
 	
 	// 할일삭제 - 민지

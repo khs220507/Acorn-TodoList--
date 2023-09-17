@@ -1,0 +1,40 @@
+
+9월 15, 2023 20:16:58.189 NEW SESSION
+9월 15, 2023 20:16:58.189 기존 브라우저 세션에서 여는 중입니다.
+9월 15, 2023 20:17:02.30 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 17, 2023 09:41:11.89 NEW SESSION
+9월 17, 2023 09:41:11.90 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 17, 2023 10:08:05.77 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 17, 2023 10:41:46.85 [12216:15532:0917/104146.857:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 17, 2023 11:12:39.89 [12216:9640:0917/111239.890:ERROR:device_event_log_impl.cc(222)] [11:12:39.891] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 17, 2023 11:25:01.64 [12216:15532:0917/112501.649:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 17, 2023 11:31:25.00 [12216:15532:0917/113125.000:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -7
+9월 17, 2023 11:34:41.83 [12216:15532:0917/113441.838:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 17, 2023 12:59:54.32 [12216:15532:0917/125954.281:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -7
+9월 17, 2023 12:59:58.48 [12216:15532:0917/125958.485:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 17, 2023 13:00:05.13 [12216:15532:0917/130005.138:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+9월 17, 2023 13:00:10.60 [12216:9640:0917/130010.608:ERROR:device_event_log_impl.cc(222)] [13:00:10.605] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 17, 2023 13:00:10.61 [12216:9640:0917/130010.618:ERROR:device_event_log_impl.cc(222)] [13:00:10.614] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+9월 17, 2023 13:00:15.58 [12216:9640:0917/130015.588:ERROR:device_event_log_impl.cc(222)] [13:00:15.584] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 17, 2023 13:00:15.59 [12216:9640:0917/130015.597:ERROR:device_event_log_impl.cc(222)] [13:00:15.593] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+
+9월 17, 2023 15:40:25.07 NEW SESSION
+9월 17, 2023 15:40:25.08 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 17, 2023 16:06:39.37 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 17, 2023 16:15:54.65 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 17, 2023 16:16:31.61 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 17, 2023 16:29:17.84 [10264:24688:0917/162917.843:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 17, 2023 18:43:40.63 [10264:24688:0917/184340.636:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -7
+9월 17, 2023 18:43:42.84 [10264:18068:0917/184342.845:ERROR:device_event_log_impl.cc(222)] [18:43:42.845] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 17, 2023 18:43:44.71 [10264:24688:0917/184344.718:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 17, 2023 18:46:54.33 [10264:24688:0917/184654.330:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 17, 2023 20:11:58.44 [10264:24688:0917/201158.444:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -109
+9월 17, 2023 20:11:59.58 [10264:18068:0917/201159.583:ERROR:device_event_log_impl.cc(222)] [20:11:59.582] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 17, 2023 20:12:01.06 [10264:24688:0917/201201.061:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 17, 2023 20:12:01.06 [10264:7040:0917/201201.069:ERROR:get_updates_processor.cc(261)] PostClientToServerMessage() failed during GetUpdates with error 2
+9월 17, 2023 20:12:18.32 [10264:24688:0917/201218.326:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+9월 17, 2023 20:12:18.33 [10264:9936:0917/201218.338:ERROR:get_updates_processor.cc(261)] PostClientToServerMessage() failed during GetUpdates with error 2
+9월 17, 2023 20:12:33.55 [10264:24688:0917/201233.553:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 17, 2023 20:12:34.75 [10264:18068:0917/201234.754:ERROR:device_event_log_impl.cc(222)] [20:12:34.753] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 17, 2023 20:12:35.60 [10264:24688:0917/201235.603:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106

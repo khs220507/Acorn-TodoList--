@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Update To-Do Item</h2>
+    
+    <form action="/TodoTeamProject/update" method="post">
+        <label for="contents">Contents:</label>
+        <textarea id="contents" name="contents" rows="4" cols="50"><%= request.getAttribute("currentContents") %></textarea>
+        
+        <!-- Include the code as a hidden field to identify the item to be updated -->
+        <input type="hidden" name="code" value="<%= request.getParameter("code") %>">
+        
+        <br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

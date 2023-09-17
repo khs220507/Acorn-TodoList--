@@ -56,6 +56,13 @@ public class Board {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	
+	public Board(String code, String contents) {
+		super();
+		this.code = code;
+		this.contents = contents;
+	}
 	public Board(String code, int no, String id, String contents, String date, String star,
 			String finished) {
 		super();

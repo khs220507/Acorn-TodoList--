@@ -11,8 +11,6 @@
 <!DOCTYPE html>
 <html>
 
-
-
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -29,20 +27,24 @@ function test(){
 				output+= '<span>';
 				
 				output+= this.contents;
-				output+= '<button>수정</button><button>삭제</button><br>';
+				 output += '<button onclick="updateContents(\'+ this.code + \')">수정</button><button>삭제</button><br>';
 				output+= '</span>';
 			});
 			document.getElementById('disp').innerHTML = output;
-		}
+		} 
 	});
 };
+
+function updateContents(itemCode) {
+    // Redirect to update.jsp with the item ID
+    window.location.href = 'update?code=' + itemCode;
+}
 
         </script>
 </head>
 <body>
 
 <div id="disp"></div>
-
 
 
 </body>
