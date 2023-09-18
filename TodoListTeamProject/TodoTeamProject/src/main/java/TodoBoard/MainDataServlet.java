@@ -19,7 +19,7 @@ public class MainDataServlet extends HttpServlet{
 		ArrayList<Board> list = s.getBoardData();
 
 		String json = new Gson().toJson(list);
-		resp.setContentType("application/json");
+		resp.setContentType("a pplication/json");
 		resp.setCharacterEncoding("UTF-8");
 		resp.getWriter().write(json);
 	}

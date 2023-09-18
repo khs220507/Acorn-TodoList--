@@ -56,13 +56,6 @@ public class Board {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-	
-	public Board(String code, String contents) {
-		super();
-		this.code = code;
-		this.contents = contents;
-	}
 	public Board(String code, int no, String id, String contents, String date, String star,
 			String finished) {
 		super();
@@ -74,8 +67,22 @@ public class Board {
 		this.star = star;
 		this.finished = finished;
 	}
-	public Board(String contents2) {
-		// TODO Auto-generated constructor stub
+	
+	
+	
+	public Board(String contents) {
+		super();
+		this.contents = contents;
+	}
+	
+	
+	
+	public Board(String code, int no, String contents, String date) {
+		super();
+		this.code = code;
+		this.no = no;
+		this.contents = contents;
+		this.date = date;
 	}
 	@Override
 	public String toString() {
