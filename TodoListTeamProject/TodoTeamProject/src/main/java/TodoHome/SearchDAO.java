@@ -1,4 +1,4 @@
-package todolistPRJ;
+package TodoHome;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -50,7 +50,7 @@ public class SearchDAO {
 		if (con != null) {
 			try {
 				pst = con.prepareStatement(sql);
-				pst.setString(1, "%" + searchTerm + "%"); 
+				pst.setString(1, "%" + searchTerm + "%");
 				rs = pst.executeQuery();
 				while (rs.next()) {
 					String memo = rs.getString("b_memo");
