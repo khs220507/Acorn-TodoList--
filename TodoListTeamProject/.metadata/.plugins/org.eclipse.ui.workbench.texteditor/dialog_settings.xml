@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="code"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="gson"/>
+			<item value="item"/>
+			<item value="id"/>
 			<item value="code"/>
 			<item value="ajax"/>
 		</list>

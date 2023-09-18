@@ -1,2 +1,10 @@
 1694913312192	Move file
 1694913539242	Move 'BoardDAO.java' to 'TodoBoard'
+1695005440241	Rename resource 'BoardSerchOne.java'
+1695005478138	Rename resource 'update.jsp'
+1695005488526	Rename resource 'searchOne.jsp'
+1695005540393	Rename resource 'BoardChangeServlet.java'
+1695009721704	Rename resource 'updatecomplete.jsp'
+1695009816497	Rename resource 'updatecompleted.jsp'
+1695010983529	Rename resource 'updateCompleted.jsp'
+1695011349792	Delete element

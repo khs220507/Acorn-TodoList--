@@ -1,0 +1,9 @@
+package TodoBoard;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/search")
+public class BoardSerchOne extends HttpServlet{
+
+}

@@ -1,20 +1,40 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="TodoBoard.Board"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script>
+
+</script>
 </head>
 <body>
-<h2>Update To-Do Item</h2>
-    
-   <form action="/TodoTeamProject/update" method="get">
-        <input type="hidden" name="code" value="${param.code}">
-        <label for="contents">Contents:</label>
-        <textarea id="contents" name="newContents" rows="4" cols="50">${param.contents}</textarea>
+	<h2>Update</h2>
+
+	<%-- <form id="updateFrm" action="/TodoTeamProject/update" method="get">
+		<input type="text"  value="${board.code}"> 
+		<textarea id="contents" name="newContents" rows="4" cols="50">${board.contents}</textarea>
+		<br> <input type="button" value="수정" onclick="updateContents()">
+	</form>  --%>
+	
+	
+	<form id="updateFrm" action="/TodoTeamProject/update" method="post">
+        
+       
+        <!-- Hidden field for the task code -->
+        <input type="hidden" name="code" value="${board.code}">
+        
+        <label for="contents">Task Contents:</label><br>
+        <textarea id="contents" name="newContents" rows="4" cols="50">${board.contents}</textarea>
         <br>
         <input type="submit" value="Update">
-    </form>
+        
+        
+    </form> 
+
+
 </body>
 </html>

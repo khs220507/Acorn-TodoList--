@@ -17,6 +17,11 @@ public class BoardService {
     public BoardService() {
         boardDAO = new BoardDAO();
     }
+    
+    public Board getBoardOne(String code) {
+		Board b =  dao.selectOne(code);
+		return b;
+	}
 
     public ArrayList<Board> getBoardData() {
         return boardDAO.showAllTodo();
@@ -26,6 +31,21 @@ public class BoardService {
     	dao.changeTodo(b);
     }
 		
+    
+ // 할일등록 - 민지
+ 	public String registerTodo(Board b) {
+ 		return dao.registerTodo(b);
+ 	}
+     
+     
+     
+ 	
+ 	
+ 	// 할일삭제 - 민지
+ 	public void deleteTodo(String code) {
+ 		dao.deleteTodo(code);
+ 	}
+
 	
 
 	// 할일등록 - 민지
@@ -34,4 +54,5 @@ public class BoardService {
 	// 할일삭제 - 민지
 	// deleteTodo()
 
+ 	
 }

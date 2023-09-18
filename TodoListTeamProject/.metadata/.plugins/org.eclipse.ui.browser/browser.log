@@ -38,3 +38,23 @@
 9월 17, 2023 20:12:33.55 [10264:24688:0917/201233.553:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
 9월 17, 2023 20:12:34.75 [10264:18068:0917/201234.754:ERROR:device_event_log_impl.cc(222)] [20:12:34.753] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
 9월 17, 2023 20:12:35.60 [10264:24688:0917/201235.603:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+9월 18, 2023 09:44:00.37 NEW SESSION
+9월 18, 2023 09:44:00.37 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 09:53:22.92 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 09:57:27.23 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 10:51:16.24 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 11:16:00.58 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 11:17:49.71 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 18, 2023 11:54:35.98 NEW SESSION
+9월 18, 2023 11:54:35.99 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 18, 2023 14:11:39.47 NEW SESSION
+9월 18, 2023 14:11:39.48 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 18, 2023 14:56:47.31 NEW SESSION
+9월 18, 2023 14:56:47.32 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 15:51:25.64 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 15:51:40.65 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 18, 2023 15:52:35.10 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

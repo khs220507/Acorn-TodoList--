@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<%@ page import="TodoBoard.Board"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<h2>Update</h2>
+
+	<form id="updateFrm" action="/TodoTeamProject/update" method="get">
+		<textarea id="contents" name="newContents" rows="4" cols="50">${board.contents}</textarea>
+		<br> <input type="button" value="수정" onclick="updateContents()">
+	</form> 
+	
+	
+	<script>
+	 function updateContents() {
+         // Get the new contents from the textarea
+         const newContents = document.getElementById("contents").value;
+
+         // Set the "newContents" input field value in the form
+         const newContentsInput = document.createElement("input");
+         newContentsInput.type = "hidden";
+         newContentsInput.name = "newContents";
+         newContentsInput.value = newContents;
+         document.getElementById("updateFrm").appendChild(newContentsInput);
+
+         // Set the form's action URL
+         document.getElementById("updateFrm").action = "/TodoTeamProject/update";
+
+         // Submit the form for updating
+         document.getElementById("updateFrm").submit();
+     }
+	</script>
+
+
+</body>
+</html>

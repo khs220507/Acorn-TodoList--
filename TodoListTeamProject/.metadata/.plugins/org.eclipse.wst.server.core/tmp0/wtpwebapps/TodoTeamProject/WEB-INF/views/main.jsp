@@ -1,18 +1,16 @@
 <%@page import="org.json.JSONObject"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="TodoBoard.Board"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
 
 <!DOCTYPE html>
 <html>
 
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <script>
 window.addEventListener("load", test);
@@ -23,11 +21,11 @@ function test(){
 		dataType:"json",
 		success:function(data){
 			output='';
-			$.each(data,function(){
+			$.each(data,function(){ 
 				output+= '<span>';
 				
 				output+= this.contents;
-				 output += '<button onclick="updateContents(\'+ this.code + \')">¼öÁ¤</button><button>»èÁ¦</button><br>';
+				output += '<button onclick="selectContents('+ this.code + ')">ìˆ˜ì •</button><button>ì‚­ì œ</button>';
 				output+= '</span>';
 			});
 			document.getElementById('disp').innerHTML = output;
@@ -35,7 +33,9 @@ function test(){
 	});
 };
 
-function updateContents(itemCode) {
+
+
+function selectContents(itemCode) {
     // Redirect to update.jsp with the item ID
     window.location.href = 'update?code=' + itemCode;
 }
@@ -45,6 +45,9 @@ function updateContents(itemCode) {
 <body>
 
 <div id="disp"></div>
+
+
+
 
 
 </body>
