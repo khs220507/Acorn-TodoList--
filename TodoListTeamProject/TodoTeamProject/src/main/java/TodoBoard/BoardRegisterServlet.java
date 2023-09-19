@@ -18,15 +18,18 @@ public class BoardRegisterServlet extends HttpServlet{
 		BoardService s = new BoardService();
 		
 		String contents = req.getParameter("contents");
+		System.out.println(contents);
 		
 		String regTodo = s.registerTodo(new Board(contents));
+		System.out.println(regTodo);
 		
 		//req.setAttribute("regTodo", regTodo);
 		//req.getRequestDispatcher("WEB-INF/views/testMain.jsp").forward(req, resp);
 		
-		resp.setContentType("application/json;charset=UTF-8");
-		resp.getWriter().write(regTodo);
+		resp.setContentType("text/plain;charset=UTF-8");
+		resp.getWriter().println(regTodo);
 
+		
 	}
 	
 }

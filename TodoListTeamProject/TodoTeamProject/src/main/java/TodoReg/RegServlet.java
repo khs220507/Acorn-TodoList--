@@ -1,4 +1,4 @@
-package userReg;
+package TodoReg;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -37,7 +37,7 @@ public class RegServlet extends HttpServlet {
 		} else if (result == 0) {
 			System.out.print("ok");
 			req.setAttribute("message", "회원가입 완료");
-			req.getRequestDispatcher("WEB-INF/views/login.jsp").forward(req, resp);
+			req.getRequestDispatcher("WEB-INF/views/main.jsp").forward(req, resp);
 		}
 
 	}

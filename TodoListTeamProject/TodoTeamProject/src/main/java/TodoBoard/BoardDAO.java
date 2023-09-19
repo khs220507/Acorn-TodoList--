@@ -123,7 +123,7 @@ public class BoardDAO {
 				e.printStackTrace();
 			}
 			close(pst,con);
-			return b.contents;
+			return b.getContents();
 		}
 
 	// 할일수정 - 현수
@@ -174,6 +174,12 @@ public class BoardDAO {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	public static void main(String[] args) {
+		BoardDAO dao = new BoardDAO();
+		String s = dao.registerTodo(new Board("test222"));
+		System.out.println(s);
 	}
 
 }

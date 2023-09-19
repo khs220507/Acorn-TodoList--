@@ -64,7 +64,7 @@
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
-               port="8090" protocol="HTTP/1.1"
+               port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443"
                maxParameterCount="1000"
@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\khs22\Desktop\TeamProject\TodoListTeamProject\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\khs22\Desktop\TeamProject\TodoListTeamProject\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\TodoTeamProject" path="/TodoTeamProject" reloadable="true" source="org.eclipse.jst.jee.server:TodoTeamProject"/></Host>
+      <Context docBase="C:\Users\hbi\Desktop\TodoList_Team\TodoList_Team\TodoListTeamProject\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\hbi\Desktop\TodoList_Team\TodoList_Team\TodoListTeamProject\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\TodoTeamProject" path="/TodoTeamProject" reloadable="true" source="org.eclipse.jst.jee.server:TodoTeamProject"/></Host>
     </Engine>
   </Service>
 </Server>

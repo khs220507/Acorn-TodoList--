@@ -1,5 +1,5 @@
 
-package Board;
+package TodoMemo;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/register")
+@WebServlet("/registerMemo")
 public class MemoRegisterServlet extends HttpServlet{
 	
 @Override

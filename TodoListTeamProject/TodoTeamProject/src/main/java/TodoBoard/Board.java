@@ -84,7 +84,7 @@ public class Board {
 	}
 	
 	public Board(String contents2) {
-		// TODO Auto-generated constructor stub
+		this.contents= contents2;
 	}
 	
 	@Override

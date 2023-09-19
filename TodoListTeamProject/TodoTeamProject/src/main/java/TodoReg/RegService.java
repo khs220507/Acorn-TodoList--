@@ -1,4 +1,4 @@
-package userReg;
+package TodoReg;
 
 public class RegService {
 	RegDAO dao = new RegDAO();
