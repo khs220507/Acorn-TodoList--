@@ -464,3 +464,8 @@
 0:0:0:0:0:0:0:1 - - [19/Sep/2023:15:32:58 +0900] "GET /favicon.ico HTTP/1.1" 404 818
 0:0:0:0:0:0:0:1 - - [19/Sep/2023:15:32:58 +0900] "GET /TodoTeamProject/login.do? HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [19/Sep/2023:15:32:58 +0900] "GET /TodoTeamProject/login HTTP/1.1" 404 832
+127.0.0.1 - - [19/Sep/2023:15:33:19 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [19/Sep/2023:15:33:19 +0900] "GET /TodoTeamProject/home HTTP/1.1" 200 2098
+0:0:0:0:0:0:0:1 - - [19/Sep/2023:15:33:20 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [19/Sep/2023:15:33:20 +0900] "GET /TodoTeamProject/login.do? HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Sep/2023:15:33:20 +0900] "GET /TodoTeamProject/login HTTP/1.1" 404 832
