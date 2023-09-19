@@ -1,4 +1,4 @@
-package TodoHome;
+package todolistPRJ;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
