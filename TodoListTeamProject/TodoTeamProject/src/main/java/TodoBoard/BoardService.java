@@ -28,7 +28,7 @@ public class BoardService {
     }
     
     public void changeBoardData(Board b) {
-    	dao.changeTodo(b);
+    	dao.changeTodo(b);  
     }
 		
     
