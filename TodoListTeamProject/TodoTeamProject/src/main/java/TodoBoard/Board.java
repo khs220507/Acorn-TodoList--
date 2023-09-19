@@ -74,20 +74,24 @@ public class Board {
 		this.star = star;
 		this.finished = finished;
 	}
+
+	public Board(String code, int no, String contents, String date) {
+		super();
+		this.code = code;
+		this.no = no;
+		this.contents = contents;
+		this.date = date;
+	}
+	
 	public Board(String contents2) {
 		// TODO Auto-generated constructor stub
 	}
+	
 	@Override
 	public String toString() {
 		return "Board [code=" + code + ", no=" + no + ", id=" + id + ", contents=" + contents + ", date=" + date
 				+ ", star=" + star + ", finished=" + finished + "]";
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	
