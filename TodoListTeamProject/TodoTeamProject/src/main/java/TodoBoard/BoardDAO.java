@@ -102,29 +102,29 @@ public class BoardDAO {
 		return list;
 	}
 
-	// 할일등록 - 민지
-	public String registerTodo(Board b) {
-
-		Connection con = dbcon();
-
-		// String insertQuery = "INSERT INTO your_table (column_name) VALUES (?)"
-
-		String sql = "insert into board_tbl (b_code, b_no, b_contents, b_date) values (seq_code.nextval, seq_no.nextval, ?, sysdate)";
-		PreparedStatement pst = null;
-
-		try {
-			pst = con.prepareStatement(sql);
-			pst.setString(1, b.contents);
-
-			pst.executeUpdate();
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	//할일등록 return - 민지
+		public String registerTodo(Board b) {
+			
+			Connection con = dbcon();
+			
+			//String insertQuery = "INSERT INTO your_table (column_name) VALUES (?)"
+			
+			String sql = "insert into board_tbl (b_code, b_no, b_contents, b_date) values (seq_code.nextval, seq_no.nextval, ?, sysdate)";
+			PreparedStatement pst = null;
+			
+			try {
+				pst=con.prepareStatement(sql);
+				pst.setString(1, b.contents);
+				
+				pst.executeUpdate();
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			close(pst,con);
+			return b.contents;
 		}
-		close(pst, con);
-		return b.contents;
-	}
 
 	// 할일수정 - 현수
 	public void changeTodo(Board b) {
@@ -144,27 +144,26 @@ public class BoardDAO {
 		close();
 	}
 
-	// 할일삭제 - 민지
 
 	// 할일삭제 - 민지
-	public void deleteTodo(String code) {
-
-		Connection con = dbcon();
-
-		String sql = "delete from board_tbl where b_code=?";
-		PreparedStatement pst = null;
-
-		try {
-			pst = con.prepareStatement(sql);
-			pst.setString(1, code);
-			pst.executeUpdate();
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		close(pst, con);
-	}
+			public void deleteTodo(String code) {
+				
+				Connection con = dbcon();
+				
+				String sql = "delete from board_tbl where b_code=?";
+				PreparedStatement pst = null;
+				
+				try {
+					pst = con.prepareStatement(sql);
+					pst.setString(1,code);
+					pst.executeUpdate();
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				close(pst,con);
+			}
 
 	public void close(AutoCloseable... a) {
 		for (AutoCloseable item : a) {

@@ -38,13 +38,11 @@ public class BoardService {
  	}
      
      
-     
  	
- 	
- 	// 할일삭제 - 민지
- 	public void deleteTodo(String code) {
- 		dao.deleteTodo(code);
- 	}
+	// 할일삭제 - 민지
+	public void deleteTodo(String code) {
+		dao.deleteTodo(code);
+	}
 
 	
 
