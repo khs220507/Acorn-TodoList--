@@ -101,6 +101,40 @@ public class BoardDAO {
 		close(rs, pst, con);
 		return list;
 	}
+	
+	public ArrayList<Board> showAllCompleteTodo() {
+
+		Board board = null;
+		Connection con = dbcon();
+		String sql = "select * from board_tbl where b_finished = 'T'";
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+
+		ArrayList<Board> list = new ArrayList<>();
+		try {
+			pst = con.prepareStatement(sql);
+			rs = pst.executeQuery();
+			while (rs.next()) {
+				String code_tmp = rs.getString(1);
+				int no_tmp = rs.getInt(2);
+				String id_tmp = rs.getString(3);
+				String contents_tmp = rs.getString(4);
+				String date_tmp = rs.getString(5);
+				String star_tmp = rs.getString(6);
+				String finished_tmp = rs.getString(7);
+				board = new Board(code_tmp, no_tmp, id_tmp, contents_tmp, date_tmp, star_tmp, finished_tmp);
+				list.add(board);
+
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// 해제
+		close(rs, pst, con);
+		return list;
+	}
 
 	//할일등록 return - 민지
 		public String registerTodo(Board b) {
@@ -143,6 +177,8 @@ public class BoardDAO {
 		}
 		close();
 	}
+	
+	
 
 
 	// 할일삭제 - 민지
@@ -174,6 +210,12 @@ public class BoardDAO {
 				e.printStackTrace();
 			}
 		}
+	}
+	public static void main(String[] args) {
+		BoardDAO dao = new BoardDAO();
+		ArrayList<Board> boardlist = new ArrayList<>();
+		boardlist = dao.showAllCompleteTodo();
+		System.out.println(boardlist);
 	}
 
 }

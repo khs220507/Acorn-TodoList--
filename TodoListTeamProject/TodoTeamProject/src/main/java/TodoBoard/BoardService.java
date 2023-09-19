@@ -27,6 +27,11 @@ public class BoardService {
         return boardDAO.showAllTodo();
     }
     
+    public ArrayList<Board> getBoardCompleteData() {
+        return boardDAO.showAllCompleteTodo();
+    }
+    
+    
     public void changeBoardData(Board b) {
     	dao.changeTodo(b);
     }

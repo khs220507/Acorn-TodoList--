@@ -58,3 +58,32 @@
 9월 18, 2023 15:51:25.64 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 9월 18, 2023 15:51:40.65 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 9월 18, 2023 15:52:35.10 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 19, 2023 11:34:16.93 NEW SESSION
+9월 19, 2023 11:34:16.94 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 19, 2023 13:06:36.93 [17572:18360:0919/130636.931:ERROR:device_event_log_impl.cc(222)] [13:06:36.932] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 19, 2023 13:28:21.72 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 19, 2023 14:10:49.08 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 19, 2023 14:52:05.13 [20008:20032:0919/145205.134:ERROR:device_event_log_impl.cc(222)] [14:52:05.134] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 19, 2023 15:13:46.74 [20008:20032:0919/151346.743:ERROR:device_event_log_impl.cc(222)] [15:13:46.743] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 19, 2023 15:49:40.82 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 19, 2023 16:26:41.63 [8724:15680:0919/162641.636:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+9월 19, 2023 16:26:43.66 [8724:15680:0919/162643.667:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 19, 2023 16:26:45.50 [8724:15680:0919/162645.501:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 19, 2023 16:27:43.97 [8724:15680:0919/162743.973:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 19, 2023 16:29:13.97 [8724:15680:0919/162913.972:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 19, 2023 16:32:41.68 [8724:15680:0919/163241.681:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 19, 2023 16:38:45.39 [8724:15680:0919/163845.397:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 19, 2023 16:48:45.40 [8724:15680:0919/164845.403:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 19, 2023 16:53:46.70 [8724:21788:0919/165346.707:ERROR:get_updates_processor.cc(261)] PostClientToServerMessage() failed during GetUpdates with error 2
+9월 19, 2023 16:54:31.71 [8724:21788:0919/165431.710:ERROR:get_updates_processor.cc(261)] PostClientToServerMessage() failed during GetUpdates with error 2
+9월 19, 2023 16:55:39.22 [8724:21788:0919/165539.229:ERROR:get_updates_processor.cc(261)] PostClientToServerMessage() failed during GetUpdates with error 2
+9월 19, 2023 16:57:20.48 [8724:21788:0919/165720.486:ERROR:get_updates_processor.cc(261)] PostClientToServerMessage() failed during GetUpdates with error 2
+9월 19, 2023 16:58:45.41 [8724:15680:0919/165845.412:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+9월 19, 2023 17:01:33.62 [8724:21788:0919/170133.621:ERROR:get_updates_processor.cc(261)] PostClientToServerMessage() failed during GetUpdates with error 2
+9월 19, 2023 17:04:11.80 [8724:18272:0919/170411.802:ERROR:device_event_log_impl.cc(222)] [17:04:11.789] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 19, 2023 17:04:14.58 [8724:18272:0919/170414.585:ERROR:device_event_log_impl.cc(222)] [17:04:14.577] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 19, 2023 17:04:14.59 [8724:18272:0919/170414.591:ERROR:device_event_log_impl.cc(222)] [17:04:14.584] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+9월 19, 2023 17:04:14.68 [8724:18272:0919/170414.681:ERROR:device_event_log_impl.cc(222)] [17:04:14.673] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 19, 2023 17:04:14.68 [8724:18272:0919/170414.688:ERROR:device_event_log_impl.cc(222)] [17:04:14.680] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+9월 19, 2023 17:04:22.50 [8724:18272:0919/170422.502:ERROR:device_event_log_impl.cc(222)] [17:04:22.495] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)

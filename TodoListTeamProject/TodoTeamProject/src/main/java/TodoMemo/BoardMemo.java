@@ -1,4 +1,4 @@
-package Board;
+package TodoMemo;
 
 public class BoardMemo {
 

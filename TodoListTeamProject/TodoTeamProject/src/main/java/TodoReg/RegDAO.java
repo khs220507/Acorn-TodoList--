@@ -1,4 +1,4 @@
-package userReg;
+package TodoReg;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
