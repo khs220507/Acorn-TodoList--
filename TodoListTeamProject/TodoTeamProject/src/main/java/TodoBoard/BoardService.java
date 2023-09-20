@@ -27,6 +27,11 @@ public class BoardService {
         return boardDAO.showAllTodo();
     }
     
+    public ArrayList<Board> getBoardCompleteData() {
+        return boardDAO.showAllCompleteTodo();
+    }
+    
+    
     public void changeBoardData(Board b) {
     	dao.changeTodo(b);
     }
@@ -38,13 +43,11 @@ public class BoardService {
  	}
      
      
-     
  	
- 	
- 	// 할일삭제 - 민지
- 	public void deleteTodo(String code) {
- 		dao.deleteTodo(code);
- 	}
+	// 할일삭제 - 민지
+	public void deleteTodo(String code) {
+		dao.deleteTodo(code);
+	}
 
 	
 

@@ -1,0 +1,18 @@
+package TodoBoard;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+@WebServlet("/completeTodo")
+public class BoardCompleteServlet extends HttpServlet{
+	BoardService s = new BoardService();
+	
+	String contents = req.getParameter("contents");
+	
+	String regTodo = s.registerTodo(new Board(contents));
+	
+	//req.setAttribute("regTodo", regTodo);
+	//req.getRequestDispatcher("WEB-INF/views/testMain.jsp").forward(req, resp);
+	
+	resp.setContentType("application/json;charset=UTF-8");
+	resp.getWriter().write(regTodo);
+}

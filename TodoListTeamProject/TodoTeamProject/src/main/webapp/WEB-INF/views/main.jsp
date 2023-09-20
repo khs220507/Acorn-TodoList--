@@ -15,10 +15,245 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-* {
-	margin: 0px;
-	padding: 0px;
-}
+
+	
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	button{
+		width: 50px;
+		height: 30px;
+		color: #2564cf;
+		background-color: white;
+		border: 1px solid #e1dfdd;
+		transition: all 0.2s ;
+		
+	}
+	button:hover{
+		background: #faf9f8;
+	}
+	hr{
+		background:#e1dfdd;
+  		height:1px;
+    	border:0;
+    	margin-top: 15px;
+    	margin-bottom: 15px;
+	}
+	header{
+		width: 100%;
+		height:48px;
+		background-color: #2564cf;
+		/*border: 1px solid black;*/
+		
+		position: relative;
+		display: flex;
+	}
+	header img{
+		width: 15px;
+		height: 15px;
+		margin-left: 10px;
+		margin-top: 14px;
+	}
+	header .title{
+		color: white;
+		font-size: 16px;
+		font-weight: bold;
+		margin-left: 40px;
+		position: relative;
+		top: 12px;
+​
+	}
+	header .wrapSearch{
+		width: 400px;
+		height: 32px;
+		background-color: white;
+		border-radius: 5px;
+		margin: 0 auto;
+		margin-top: 7px;
+		
+	}
+	.wrapSearch img{
+		position: relative;
+		top: -5px;
+	}
+	header .searchInsert{
+		width: 300px;
+		height: 20px;
+		outline: none;
+		border: none;
+		margin-left: 10px;
+		position: relative;
+		top: -8px;
+		
+	}
+	.logOutIcon{
+		width: 35px;
+		height: 35px;
+		
+		position: absolute;
+		right: 10px;
+		top: -8px;
+		
+		filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(169deg) brightness(125%) contrast(98%);
+	}
+	
+	.wrapContents{
+		display: flex;
+	}
+	nav{
+		width: 15%;
+		height: 900px;
+		border-right: 1px solid #edeceb;
+		padding-top: 15px;
+		position: relative;
+	}
+	.wrapMenu{
+		width: 90%;
+		height: 50px;
+		line-height: 50px;
+		text-align: left;
+		padding-left: 30px;
+	}
+	.wrapMenu img{
+		margin-right: 5px;
+		position: relative;
+		top: 2px;
+	}
+	.wrapMenu:hover{
+		background-color: #eff6fc;
+	}
+	a{
+		color: black;
+		text-decoration: none;
+		font-size: 14px;
+	}
+	a:hover{
+		font-weight: bold;
+	}
+	
+	section{
+		width: 85%;
+		height: 900px;
+		background-color: #faf9f8;
+		/*border: 1px solid black;*/
+		padding-top: 20px;
+	}
+	.todayToDoTitle{
+		font-size: 20px;
+		color: #292827;
+		font-weight: bold;
+		margin-left: 25px;
+	}
+	.toDo{
+		width: 97%;
+		height: 52px;
+		border: 1px solid #edeceb;
+		background-color: white;
+		box-shadow: 1px 1px 1px #edeceb;
+		border-radius: 5px;
+		margin: 10px auto;
+		line-height: 52px;
+		
+		position: relative;
+	}
+	
+	/*.checkBox {
+        /* border: 1px solid black; 
+        float: left;
+        margin-left: 70px;
+        margin-top: -65px;
+        cursor: pointer;
+      }
+      */
+      
+      .checkBox{
+		  position: relative;
+		  top: 3px;
+	  }
+      
+      .toDo label{
+		  padding-left: 5px;
+	  }
+      
+      #toDoInsert{
+		  width: 90.5%;
+		  height: 46px;
+		  outline: none;
+		  border: none;
+		  padding-left: 5px;
+		
+	  }
+      input[type="checkbox"] {
+	    width: 1rem;
+	    height: 1rem;
+	    border-radius: 50%;
+	    border: 1px solid #999;
+	    appearance: none;
+	    cursor: pointer;
+	    transition: background 0.2s;
+	    
+	    margin-left: 10px;
+  }
+      
+      input[type="checkbox"]:checked {
+        appearance: none;
+        background-color: #2564cf;
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid black;
+        border-radius: 50%;
+      }
+      .wrapButton{
+		 position: absolute;
+		 right: 15px;
+		 top: 0px;
+	  }
+​
+</style>
+
+<script>
+
+window.addEventListener("load", test);
+
+function test(){
+	$.ajax({
+		type:"get",
+		url:"/TodoTeamProject/mainData",
+		dataType:"json",
+		success:function(data){
+			output='';
+			$.each(data,function(){ 
+				output+= '<span>';
+				output+='<div class="toDo"><input type="checkbox" class="checkBox"><label for="toDo2">';
+				output+= this.contents;
+				output+= '</label><div class="wrapButton"><button onclick="selectContents('+ this.code + ')">수정</button><button>삭제</button></div></div>';
+				output+= '</span>';
+			});
+			document.getElementById('disp').innerHTML = output;
+		} 
+	});
+};
+
+function test2(){
+	$.ajax({
+		type:"get",
+		url:"/TodoTeamProject/completeData",
+		dataType:"json",
+		success:function(data){
+			output='';
+			$.each(data,function(){ 
+				output+= '<span>';
+				output+='<div class="toDo"><input type="checkbox" class="checkBox"><label for="toDo2">';
+				output+= this.contents;
+				output+= '</label><div class="wrapButton"><button onclick="selectContents('+ this.code + ')">수정</button><button>삭제</button></div></div>';
+				output+= '</span>';
+			});
+			document.getElementById('disp').innerHTML = output;
+		} 
+	});
+};
+
 
 ul {
 	background: pink;
@@ -201,6 +436,7 @@ section {
 	padding-left: 5px;
 }
 
+
 #toDoInsert {
 	width: 93.5%;
 	height: 46px;
@@ -342,9 +578,11 @@ input[type="checkbox"]:checked {
 			}
 		});
 	}
+
 </script>
 </head>
 <body>
+
 
 	<div class="wrapOutside">
 
