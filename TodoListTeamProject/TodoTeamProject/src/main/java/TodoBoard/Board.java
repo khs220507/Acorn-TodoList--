@@ -1,6 +1,6 @@
 package TodoBoard;
 
-
+ 
 public class Board {
 	String code; //1 
 	int no; // 2

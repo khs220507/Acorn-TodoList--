@@ -38,7 +38,7 @@ public class SearchDAO {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
+		} 
 	}
 
 	public List<String> searchMemo(String searchTerm) {

@@ -157,7 +157,7 @@
 					<div class="hr-sect">또는</div>
 					<%
 					}
-					%>
+					%> 
 					<form action="reg.do" method="get">
 						<input type="submit" class="btn2" value="회원가입">
 					</form>

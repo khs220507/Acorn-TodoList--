@@ -1,7 +1,7 @@
 package TodoHome;
 
 public class Login {
-	String id;
+	String id;  
 	String pw;
 	String name;
 	String birth;

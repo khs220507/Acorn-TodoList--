@@ -12,7 +12,7 @@
 table,h2{
 width:300px;
 heigt:20px;
-border-collapse: collapse;
+border-collapse: collapse; 
 margin:0 auto;
 text-align:center;
 }
