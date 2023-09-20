@@ -9,7 +9,7 @@
 
 <script>
 
-</script>
+</script>  
 </head>
 <body>
 	<h2>할 일 수정</h2>

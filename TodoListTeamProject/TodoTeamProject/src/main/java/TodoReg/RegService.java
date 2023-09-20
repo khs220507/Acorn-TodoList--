@@ -1,8 +1,8 @@
 package TodoReg;
 
-public class RegService {
+public class RegService {  
 	RegDAO dao = new RegDAO();
-	
+	 
 	public int regUser(User u ) {
 		dao.insertUser(u);
 		boolean result = u.id.isEmpty() || u.pw.isEmpty() || u.name.isEmpty()|| u.birth.isEmpty()||u.tel.isEmpty();
@@ -17,7 +17,21 @@ public class RegService {
 		
 		
 	}
-	public void deleteUser(String id ) {
-		dao.deleteUser(id);;
+	
+	public User getUser(String id) {
+		User u = dao.selectUser(id);
+		return u;
 	}
+	
+	public void changeUser(User u) {
+
+		dao.updateUser(u);
+		
+	}
+	
+	public void deleteUser(String id) {
+		dao.deleteUser(id);
+	}
+	
+	
 }

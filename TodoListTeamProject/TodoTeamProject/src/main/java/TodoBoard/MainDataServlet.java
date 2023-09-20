@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
-
+  
 @WebServlet("/mainData")
 public class MainDataServlet extends HttpServlet{
 	@Override

@@ -145,7 +145,7 @@
 					<%
 					if (session.getAttribute("userId") == null) {
 					%>
-					<form action="login.do" method="post" id="login-form">
+					<form action="login" method="post" id="login-form">
 						<input type="text" name="id" placeholder="아이디, 이메일" /> <input
 							type="password" name="pw" placeholder="비밀번호" /> <input
 							type="submit" class="btn1" value="로그인">
@@ -157,7 +157,7 @@
 					<div class="hr-sect">또는</div>
 					<%
 					}
-					%>
+					%>  
 					<form action="reg.do" method="get">
 						<input type="submit" class="btn2" value="회원가입">
 					</form>

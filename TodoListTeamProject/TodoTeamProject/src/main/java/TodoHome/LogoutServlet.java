@@ -5,8 +5,8 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-
-@WebServlet("/logout.do")
+  
+@WebServlet("/logout")
 public class LogoutServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -18,6 +18,6 @@ public class LogoutServlet extends HttpServlet {
 			session.invalidate();
 		}
 
-		response.sendRedirect("login.do");
+		response.sendRedirect("/TodoTeamProject/login");
 	}
 }

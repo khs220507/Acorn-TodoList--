@@ -1,6 +1,6 @@
 package TodoHome;
 
-import java.io.IOException;
+import java.io.IOException;  
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/login.do")
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
 	@Override
@@ -30,7 +30,6 @@ public class LoginServlet extends HttpServlet {
 		int result = dao.login(id, pw);
 
 		if (result == 1) {
-
 			HttpSession session = request.getSession();
 			session.setAttribute("userId", id);
 			response.sendRedirect("main.do");

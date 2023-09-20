@@ -37,22 +37,30 @@ public class SearchDAO {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
+		}  
 	}
 
 	public List<String> searchMemo(String searchTerm) {
+
 		List<String> searchResults = new ArrayList<>();
 		Connection con = dbcon();
-		String sql = "select b_memo from board_tbl where b_memo like ?";
+
+		if (searchTerm == null) {
+			searchTerm = "";
+		}
+
+		String sql = "select b_contents from board_tbl where replace(b_contents, ' ','') like ?";
 		PreparedStatement pst = null;
 		ResultSet rs = null;
 		if (con != null) {
 			try {
 				pst = con.prepareStatement(sql);
-				pst.setString(1, "%" + searchTerm + "%");
+				pst.setString(1, "%" + searchTerm.replace(" ", "") + "%");
+
 				rs = pst.executeQuery();
 				while (rs.next()) {
-					String memo = rs.getString("b_memo");
+
+					String memo = rs.getString("b_contents");
 					searchResults.add(memo);
 				}
 				close(rs, pst);

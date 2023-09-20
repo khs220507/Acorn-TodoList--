@@ -1,8 +1,8 @@
 package TodoReg;
 
-public class User {
-
-	String id;
+public class User {  
+ 
+	String id; 
 	String pw;
 	String name;
 	String birth;
@@ -15,6 +15,17 @@ public class User {
 		this.birth = birth;
 		this.tel = tel;
 	}
+	
+	public User(String id, String pw) {
+		this.id = id;
+		this.pw = pw;
+	}
+
+	public void User1(String id, String tel) {
+		this.id = id;
+		this.tel = tel;
+	}
+
 	public User() {
 		super();
 	}

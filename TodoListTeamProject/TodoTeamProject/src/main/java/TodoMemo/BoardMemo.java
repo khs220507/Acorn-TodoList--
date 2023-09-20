@@ -1,7 +1,7 @@
 package TodoMemo;
 
 public class BoardMemo {
-
+  
 	String m_code;
 	String m_contents;
 	
