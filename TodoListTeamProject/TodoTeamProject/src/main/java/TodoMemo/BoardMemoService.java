@@ -1,4 +1,4 @@
-package Board;
+package TodoMemo;
 
 import java.util.ArrayList;
 
