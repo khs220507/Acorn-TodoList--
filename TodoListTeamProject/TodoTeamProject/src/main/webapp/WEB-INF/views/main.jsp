@@ -245,28 +245,9 @@ li {
 
 <script>
 
-window.addEventListener("load", test);
 
-function test(){
-	$.ajax({
-		type:"get",
-		url:"/TodoTeamProject/mainData",
-		dataType:"json",
-		success:function(data){
-			output='';
-			$.each(data,function(){ 
-				output+= '<span>';
-				output+='<div class="toDo"><input type="checkbox" class="checkBox"><label for="toDo2">';
-				output+= this.contents;
-				output+= '</label><div class="wrapButton"><button onclick="selectContents('+ this.code + ')">수정</button><button>삭제</button></div></div>';
-				output+= '</span>';
-			});
-			document.getElementById('disp').innerHTML = output;
-		} 
-	});
-};
 
-function test2(){
+function updateList(){
 	$.ajax({
 		type:"get",
 		url:"/TodoTeamProject/completeData",
@@ -290,9 +271,9 @@ function test2(){
 
 
 <script>
-	window.addEventListener("load", test);
+	window.addEventListener("load", showAll);
 
-	function test() {
+	function showAll() {
 		$
 				.ajax({
 					type : "get",
@@ -336,7 +317,7 @@ function test2(){
 					data : "contents=" + contents,
 					dataType : "text",
 					success : function(data) {
-						let output = '';
+						/*let output = '';
 						output += '<span>';
 						output += '<div class="toDo"><input type="checkbox" class="checkBox"><label for="toDo2">';
 						output += contents;
@@ -346,6 +327,9 @@ function test2(){
 						output += '</span>';
 
 						$("#disp").append(output);
+						
+						*/
+						showAll();
 
 					},
 					error : function(err) {
@@ -357,12 +341,7 @@ function test2(){
 
 	// 김민지 - 삭제
 
-	$(document).on('click', '.deleteButton', function() {
-		$(this).closest('span').remove();
-		let code = $(this).closest('span').find('.code').text().trim();
-		deleteList(code);
-
-	});
+	
 
 	function deleteList(code) {
 
@@ -373,7 +352,9 @@ function test2(){
 			dataType : "text",
 			success : function(data) {
 
-				$(code).remove();
+				alert(data);
+				//$(code).remove();
+				showAll();
 			},
 			error : function(err) {
 				alert("삭제 요청에 실패했습니다.");

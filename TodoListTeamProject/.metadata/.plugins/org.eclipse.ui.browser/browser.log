@@ -90,3 +90,19 @@
 
 9월 20, 2023 09:03:39.59 NEW SESSION
 9월 20, 2023 09:03:39.60 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 20, 2023 10:39:58.43 NEW SESSION
+9월 20, 2023 10:39:58.43 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 10:46:06.93 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 10:52:09.74 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 14:13:34.97 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 20, 2023 14:57:38.15 NEW SESSION
+9월 20, 2023 14:57:38.16 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 16:02:23.61 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 16:54:37.78 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 20, 2023 17:18:23.46 [19076:2480:0920/171823.461:ERROR:cert_verify_proc_builtin.cc(701)] CertVerifyProcBuiltin for event.realclick.co.kr failed:
+9월 20, 2023 17:18:23.46 ----- Certificate i=0 (CN=*.realclick.co.kr) -----
+9월 20, 2023 17:18:23.46 ERROR: Time is after notAfter
+9월 20, 2023 17:18:23.46 
+9월 20, 2023 17:18:23.46 

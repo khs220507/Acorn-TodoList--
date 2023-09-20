@@ -6,22 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="test"/>
+		<item key="selection" value="board"/>
 		<list key="findhistory">
-			<item value="test"/>
-			<item value="comple"/>
+			<item value="board"/>
 			<item value="toDo"/>
-			<item value="toDoInsert"/>
-			<item value="추가"/>
-			<item value="작업추가"/>
-			<item value="insertBtn"/>
-			<item value="update"/>
+			<item value="submitBtn"/>
+			<item value="Fr"/>
+			<item value="form"/>
+			<item value="todayToDoTitle"/>
+			<item value="section"/>
+			<item value="updateFrm"/>
+			<item value="wrapButton"/>
 			<item value="button"/>
-			<item value="ajax"/>
-			<item value="gson"/>
-			<item value="item"/>
-			<item value="id"/>
-			<item value="code"/>
+			<item value=".todo"/>
+			<item value="Todo"/>
+			<item value="todo"/>
+			<item value="texttodo"/>
+			<item value="textt"/>
 		</list>
 		<list key="replacehistory">
 		</list>
