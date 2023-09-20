@@ -12,7 +12,7 @@
 </script>
 </head>
 <body>
-	<h2>Update</h2>
+	<h2>할 일 수정</h2>
 
 	<%-- <form id="updateFrm" action="/TodoTeamProject/update" method="get">
 		<input type="text"  value="${board.code}"> 
@@ -27,7 +27,7 @@
         <!-- Hidden field for the task code -->
         <input type="hidden" name="code" value="${board.code}">
         
-        <label for="contents">Task Contents:</label><br>
+        <label for="contents">할 일:</label><br>
         <textarea id="contents" name="newContents" rows="4" cols="50">${board.contents}</textarea>
         <br>
         <input type="submit" value="Update">
