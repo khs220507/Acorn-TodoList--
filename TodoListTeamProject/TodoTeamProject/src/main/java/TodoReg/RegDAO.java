@@ -34,6 +34,47 @@ public class RegDAO {
 		return con;
 
 	}
+	public User selectUser(String id) {
+		con=dbcon();
+		String sql = "select * from usertbl where id = ?";
+		User u = null;
+		try {
+			pst = con.prepareStatement(sql);
+			pst.setString(1,id);
+			rs = pst.executeQuery();
+			if(rs.next()) {
+				String u_id = rs.getString(1);
+				String u_pw = rs.getString(2);
+				String u_name = rs.getString(3);
+				String u_birth = rs.getString(4);
+				String u_tel = rs.getString(5);
+				u = new User(u_id,u_pw,u_name,u_birth,u_tel);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		close(rs,pst,con);
+		return u;
+	}
+	
+	public void updateUser(User u) {
+		con = dbcon();
+		String sql = "update usertbl set pw = ? , tel =? where id = ?";
+		
+		try {
+			pst = con.prepareStatement(sql);
+			pst.setString(1, u.getPw());
+			pst.setString(2, u.getTel());
+			pst.setString(3, u.getId());
+			pst.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		close(pst,con);
+		
+	}
 	
 	public void insertUser(User u) {
 		con = dbcon();

@@ -17,7 +17,21 @@ public class RegService {
 		
 		
 	}
-	public void deleteUser(String id ) {
-		dao.deleteUser(id);;
+	
+	public User getUser(String id) {
+		User u = dao.selectUser(id);
+		return u;
 	}
+	
+	public void changeUser(User u) {
+
+		dao.updateUser(u);
+		
+	}
+	
+	public void deleteUser(String id) {
+		dao.deleteUser(id);
+	}
+	
+	
 }

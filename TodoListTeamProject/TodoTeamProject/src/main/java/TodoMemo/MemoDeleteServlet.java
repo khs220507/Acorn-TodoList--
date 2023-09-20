@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/m_delete")
+@WebServlet("/deleteMemo")
 public class MemoDeleteServlet extends HttpServlet{
 	
 @Override

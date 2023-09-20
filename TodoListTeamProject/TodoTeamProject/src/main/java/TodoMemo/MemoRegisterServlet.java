@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/m_register")
+
+@WebServlet("/registerMemo")
+
 public class MemoRegisterServlet extends HttpServlet{
 	
 @Override
