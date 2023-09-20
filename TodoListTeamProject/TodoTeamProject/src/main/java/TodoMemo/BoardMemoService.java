@@ -2,7 +2,7 @@ package TodoMemo;
 
 import java.util.ArrayList;
 
-public class BoardMemoService { 
+public class BoardMemoService {  
 	BoardMemoDAO dao= new BoardMemoDAO();
 	
 	public ArrayList<BoardMemo> getSelectAll(){

@@ -1,6 +1,6 @@
 package TodoReg;
 
-public class User { 
+public class User {  
  
 	String id; 
 	String pw;

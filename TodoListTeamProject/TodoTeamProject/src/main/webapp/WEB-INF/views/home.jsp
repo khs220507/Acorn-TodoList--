@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<style> 
+<style>  
 .total {
 	position: relative;
 	width: 100%;

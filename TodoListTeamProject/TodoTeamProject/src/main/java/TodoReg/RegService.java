@@ -1,6 +1,6 @@
 package TodoReg;
 
-public class RegService { 
+public class RegService {  
 	RegDAO dao = new RegDAO();
 	 
 	public int regUser(User u ) {
