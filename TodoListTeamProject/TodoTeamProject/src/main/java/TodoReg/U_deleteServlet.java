@@ -1,6 +1,6 @@
 package TodoReg;
 
-import java.io.IOException;
+import java.io.IOException;  
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 @WebServlet("/u_del.do")
 public class U_deleteServlet extends HttpServlet{
-	
+	 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
@@ -24,6 +24,6 @@ public class U_deleteServlet extends HttpServlet{
 		String id = req.getParameter("id");
 		s.deleteUser(id);
 		
-	}
+	} 
 	
 }

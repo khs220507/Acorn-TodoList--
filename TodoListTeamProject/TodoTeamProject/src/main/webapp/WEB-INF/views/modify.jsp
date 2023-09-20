@@ -13,7 +13,7 @@ String pw =(String) request.getAttribute("pw");
 String name =(String) request.getAttribute("name"); 
 String birth =(String) request.getAttribute("birth"); 
 String tel =(String) request.getAttribute("tel"); 
-%>
+%>  
 
 	<form  action="modi.do" method="post">
         <table>

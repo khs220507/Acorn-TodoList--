@@ -12,7 +12,7 @@ ul {
 }
 </style>
 </head>
-<body>
+<body>  
 	<h1>검색 결과</h1>
 
 	<form action="searchtest" method="post">

@@ -9,7 +9,7 @@
 
 <script>
 
-</script>
+</script>  
 </head>
 <body>
 	<h2>Update</h2>

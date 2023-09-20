@@ -7,7 +7,7 @@ import org.json.JSONObject;
 import org.json.JSONString;
 
 import netscape.javascript.JSObject;
-
+  
 public class BoardService {
 
 	BoardDAO dao = new BoardDAO();

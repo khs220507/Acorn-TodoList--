@@ -1,8 +1,8 @@
 package TodoReg;
 
-public class User {
-
-	String id;
+public class User {  
+ 
+	String id; 
 	String pw;
 	String name;
 	String birth;

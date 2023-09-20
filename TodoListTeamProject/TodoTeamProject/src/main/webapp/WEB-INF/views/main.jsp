@@ -336,7 +336,7 @@ header .searchInsert {
 	top: -38px;
 	left: 20px;
 	margin-top: 15px;
-}
+}  
 
 .box {
 	z-index: 9999;

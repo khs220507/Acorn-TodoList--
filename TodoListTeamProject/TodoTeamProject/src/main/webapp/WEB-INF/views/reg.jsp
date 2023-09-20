@@ -13,7 +13,7 @@
 	margin-top: -8px;
 	/* border: 1px solid black; */
 	font-family: "돋움", Dotum, "맑은 고딕", "Malgun Gothic", "Apple Gothic",
-		sans-serif;
+		sans-serif;  
 	justify-content: center;
 	align-items: center;
 	text-align: center;
