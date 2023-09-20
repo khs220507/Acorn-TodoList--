@@ -45,6 +45,6 @@ public class BoardUpdateServlet extends HttpServlet{
 		s.changeBoardData(b);
 		
 		
-		resp.sendRedirect("/TodoTeamProject/main");
+		resp.sendRedirect("/TodoTeamProject/main.do");
 	}
 }
