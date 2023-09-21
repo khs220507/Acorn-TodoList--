@@ -6,30 +6,30 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="board"/>
+		<item key="selection" value="삭제"/>
 		<list key="findhistory">
-			<item value="board"/>
-			<item value="toDo"/>
-			<item value="submitBtn"/>
-			<item value="Fr"/>
-			<item value="form"/>
-			<item value="todayToDoTitle"/>
-			<item value="section"/>
-			<item value="updateFrm"/>
-			<item value="wrapButton"/>
-			<item value="button"/>
-			<item value=".todo"/>
-			<item value="Todo"/>
-			<item value="todo"/>
-			<item value="texttodo"/>
-			<item value="textt"/>
+			<item value="삭제"/>
+			<item value="addList"/>
+			<item value="deleteList"/>
+			<item value="deleteBu"/>
+			<item value="delete"/>
+			<item value="de"/>
+			<item value="TEST"/>
+			<item value="TEST01"/>
+			<item value="updateFrm`"/>
+			<item value="wrap_test"/>
+			<item value="wrap"/>
+			<item value="test"/>
+			<item value="load"/>
+			<item value="serarch"/>
+			<item value="showAll"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="711"/>
-		<item key="DIALOG_Y_ORIGIN" value="221"/>
+		<item key="DIALOG_X_ORIGIN" value="6"/>
+		<item key="DIALOG_Y_ORIGIN" value="646"/>
 		<item key="DIALOG_WIDTH" value="270"/>
 		<item key="DIALOG_HEIGHT" value="354"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-21|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
