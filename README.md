@@ -28,6 +28,7 @@
 - Memo Deletion
 - Search
 - Showing Important Tasks
+![투두리스트별표시](https://github.com/khs220507/AcornAcademy_TeamProejct_TodoList/assets/129834692/df31999e-e585-4392-8c3b-75f6c58693cc)
 
 ## Team Member
 - Hyunsu Kim (Team Leader)
