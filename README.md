@@ -1,6 +1,6 @@
 # Acorn Academy 3rd Team Project : MS TodoList (2023.00.00 ~ 2023.00.00)
 
-![호텔예약](https://github.com/khs220507/AcornAcademy_TeamProejct_HotelReservation/assets/129834692/5e46de15-6b43-4365-9377-ecad23fa26bb)
+<img width="359" alt="투두리스트" src="https://github.com/khs220507/AcornAcademy_TeamProejct_TodoList/assets/129834692/f7d078c3-8ce0-46fb-8188-e2c000d1f105">
 
 ## Project Goal
 - Practicing Java Grammar by producing your own program
