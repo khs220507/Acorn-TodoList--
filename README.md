@@ -3,7 +3,7 @@
 <img width="359" alt="투두리스트" src="https://github.com/khs220507/AcornAcademy_TeamProejct_TodoList/assets/129834692/f7d078c3-8ce0-46fb-8188-e2c000d1f105">
 
 ## Project Goal
-- Practicing MVC Pattern structure
+- Practicing MVC pattern structure
 - Applying Ajax techniques
 - Using JSON for data transfer
 
