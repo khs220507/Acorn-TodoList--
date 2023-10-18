@@ -11,6 +11,24 @@
 ## Project Plan Management
 ![투두리스트플랜](https://github.com/khs220507/AcornAcademy_TeamProejct_TodoList/assets/129834692/0e1d8bcd-d9a2-42c2-8c01-46418cb29a05)
 
+## Implemented features
+- join the membership
+- Membership modification
+- Membership Withdrawal
+- Login
+- Logout
+- Filtering
+- To-do inquiry
+- To-do Registration
+- To-do Modification
+- To-do Deletion
+- Memo inquiry
+- Memo Registration
+- Memo Modification
+- Memo Deletion
+- Search
+- Showing Important Tasks
+
 ## Team Member
 - Hyunsu Kim (Team Leader)
 - Minji Kim
