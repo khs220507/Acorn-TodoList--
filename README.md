@@ -8,8 +8,7 @@
 
 
 ## Project Plan Management
-![image](https://github.com/khs220507/AcornAcademy_TeamProejct_HotelReservation/assets/129834692/af1b096f-9b76-44b7-bcef-c490b7d4a35a)
-
+![투두리스트플랜](https://github.com/khs220507/AcornAcademy_TeamProejct_TodoList/assets/129834692/0e1d8bcd-d9a2-42c2-8c01-46418cb29a05)
 
 ## Team Member
 - Hyunsu Kim (Team Leader)
